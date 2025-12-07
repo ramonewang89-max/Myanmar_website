@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>缅甸 - 国家概况</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: "PingFang SC", Arial, sans-serif; 
+            line-height: 1.7; 
+            padding: 30px 20px; 
+            background-color: #f4f4f9; 
+            color: #333; 
+        }
+
+        h1 { 
+            text-align: center; 
+            color: #d32f2f; 
+            margin-bottom: 40px; 
+            font-size: clamp(1.8rem, 4vw, 2.5rem); 
+            font-weight: bold;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+            position: relative;
+            padding-bottom: 15px;
+        }
+        h1::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: #d32f2f;
+            border-radius: 2px;
+        }
+
+        /* 容器调整：只保证图片位置不动，删除图片区域的白色块相关样式 */
+        .container { 
+            display: flex; 
+            justify-content: space-between;
+            align-items: flex-start; /* 恢复默认，避免强制等高导致图片拉伸 */
+            gap: 30px; 
+            max-width: 1200px; 
+            margin: 0 auto;
+            flex-wrap: wrap;
+        }
+
+        /* 文字部分保留原有样式 */
+        .text { 
+            flex: 1; 
+            min-width: 300px; 
+            padding: 30px; 
+            background-color: white; 
+            border-radius: 12px; 
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+            line-height: 1.8; 
+            width: 50%; 
+            display: flex;
+            flex-direction: column;
+        }
+
+        .text h2 {
+            color: #d32f2f; 
+            margin: 0 0 18px 0; 
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            border-bottom: 2px solid #f8e0e0;
+            padding-bottom: 8px;
+            font-weight: 600;
+        }
+        .text h2 + h2 {
+            margin-top: 30px;
+        }
+        .text h3 {
+            color: #b71c1c;
+            margin: 15px 0 10px 0;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .text p { 
+            margin-bottom: 15px; 
+            font-size: 1rem;
+            color: #555;
+            text-align: justify;
+            text-indent: 2em; 
+        }
+        .text .highlight {
+            background-color: #fff3e0;
+            padding: 12px 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid #f9a825;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        /* 图片部分：删除所有白色块（白底、内边距、阴影、圆角等），只保留纯图片，位置不动 */
+        .img-box { 
+            flex: 1; 
+            min-width: 300px; 
+            width: 50%; 
+            /* 删掉所有白色块相关样式：padding、background、border-radius、box-shadow等 */
+            text-align: center; /* 只保留文字居中，图片说明文字可保留也可删，这里保留 */
+        }
+
+        .img-box img { 
+            width: 100%; 
+            height: auto; 
+            /* 删掉图片的圆角、阴影，只保留基础样式，位置不动 */
+            transition: transform 0.3s ease; 
+        }
+        .img-box img:hover {
+            transform: scale(1.02); 
+        }
+        /* 图片说明文字保留（如需删除可直接删掉<p>标签） */
+        .img-box p {
+            margin-top: 15px;
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* 按钮样式保留 */
+        .btn-group { 
+            margin-top: auto; 
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px; 
+            padding-top: 20px;
+        }
+        .btn { 
+            display: inline-block; 
+            padding: 12px 28px; 
+            background: linear-gradient(to right, #fbc02d, #f9a825); 
+            color: black; 
+            text-decoration: none; 
+            border-radius: 8px; 
+            transition: all 0.3s; 
+            font-size: 1rem; 
+            text-transform: uppercase;
+            font-weight: 600;
+            box-shadow: 0 4px 10px rgba(249, 168, 37, 0.2);
+            flex: 1;
+            min-width: 180px; 
+            text-align: center;
+        }
+
+        .btn:hover { 
+            background: linear-gradient(to right, #f9a825, #f57f17); 
+            transform: translateY(-2px); 
+            box-shadow: 0 6px 15px rgba(249, 168, 37, 0.3);
+        }
+
+        /* 小屏适配保留 */
+        @media (max-width: 768px) {
+            .container { 
+                flex-direction: column; 
+                align-items: center;
+                gap: 20px;
+            }
+
+            .text, .img-box { 
+                width: 100%; 
+                max-width: none;
+            }
+            .text {
+                padding: 20px;
+            }
+            .text p {
+                text-indent: 1.5em; 
+            }
+            .btn {
+                min-width: 100%; 
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>缅甸 - 国家概况</h1>
+    <div class="container">
+        <!-- 文字部分保留不变 -->
+        <div class="text">
+            <h2>基本国情</h2>
+            <p>缅甸联邦共和国（简称缅甸）位于东南亚中南半岛西部，国土面积约67.66万平方公里，东临老挝、泰国，北接中国，西北连孟加拉国、印度，西临孟加拉湾，南濒安达曼海。</p>
+            <p>首都为内比都（2005年从仰光迁都），主要城市有仰光、曼德勒。总人口约5400万，主体民族为缅族，另有135个少数民族，官方语言为缅甸语，80%以上人口信奉上座部佛教。</p>
+            <p>缅甸是农业大国，主要农作物为水稻、豆类，是东南亚重要稻米出口国；同时拥有丰富的翡翠、红宝石等矿产资源，森林覆盖率约45%。</p>
+
+            <h2>政治发展历程（1948年独立后至今）</h2>
+            <h3>1. 初期民主与军事接管（1948-1962年）</h3>
+            <p>1948年1月4日，缅甸脱离英联邦正式独立，成立缅甸联邦，实行议会制民主。但独立后国内民族矛盾、党派纷争不断，政局动荡，经济发展缓慢。</p>
+
+            <h3>2. 军政府统治时期（1962-2011年）</h3>
+            <p>1962年，缅军领导人奈温发动政变，推翻民选政府，建立军政府，实行一党制和计划经济。期间缅甸长期处于封闭状态，国际制裁不断，经济发展滞后，但民族问题得到一定控制。</p>
+
+            <h3>3. 民主化转型（2011-2020年）</h3>
+            <p>2011年，军政府解散，成立民选政府，开启民主化改革。缅甸逐步开放国门，解除部分国际制裁，吸引外资，国内政治氛围宽松化，昂山素季领导的全国民主联盟成为主要反对党并参与政治。</p>
+
+            <h3>4. 政局变动与当前状态（2021年至今）</h3>
+            <p>2021年2月，缅甸军方以选举舞弊为由接管政权，成立国家管理委员会，昂山素季等民盟领导人被扣押。此后缅甸国内局势紧张，部分西方国家重启制裁，但缅甸仍与中国、俄罗斯等国保持正常外交关系，聚焦稳定国内秩序与经济复苏。</p>
+
+            <div class="highlight">
+                <strong>核心总结：</strong>独立以来，缅甸政治历经民主、军政府、民主化转型、政局变动四个阶段，民族问题、政治体制争议是长期影响稳定的关键因素，当前正处于秩序重建与经济恢复阶段。
+            </div>
+
+            <div class="btn-group">
+                <a href="index.html" class="btn">返回首页</a>
+                <a href="culture.html" class="btn">查看特色文化</a>
+                <a href="nature.html" class="btn">查看自然景观</a>
+            </div>
+        </div>
+
+        <!-- 图片部分：只保留图片和说明文字（无任何白色块），位置不动 -->
+        <div class="img-box">
+            <img src="myanmar-map.jpg" alt="缅甸地图">
+            <p>缅甸全图：标注了主要城市、河流、边境线及海洋分布</p>
+        </div>
+    </div>
+</body>
+</html>

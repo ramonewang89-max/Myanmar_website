@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>缅甸 - 特色文化</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: "PingFang SC", Arial, sans-serif; 
+            line-height: 1.7; 
+            padding: 20px; 
+            background-color: #f8f9fa; /* 浅背景色，提升层次感 */
+        }
+        h1 { 
+            text-align: center; 
+            color: #388e3c; 
+            margin-bottom: 40px; 
+            font-size: 2.2rem;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        /* 标题底部装饰线，增强视觉焦点 */
+        h1::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: #388e3c;
+            border-radius: 2px;
+        }
+        .culture-container { 
+            display: flex; 
+            gap: 30px; 
+            max-width: 1200px; 
+            margin: 0 auto 40px; /* 增加底部间距，区分不同板块 */
+            flex-wrap: wrap; 
+            justify-content: space-between; 
+        }
+        .culture-card { 
+            width: 48%; 
+            text-align: center; 
+            padding: 25px; 
+            border-radius: 12px; /* 更大圆角，更现代 */
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* 柔和阴影 */
+            margin-bottom: 20px; 
+            background: white; /* 卡片白底，突出内容 */
+            transition: all 0.3s ease; /* 新增：卡片hover过渡 */
+        }
+        /* 卡片hover效果，提升交互感 */
+        .culture-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+        }
+        .culture-card img { 
+            width: 100%; 
+            height: 250px; 
+            object-fit: cover; 
+            border-radius: 8px; 
+            margin-bottom: 20px; 
+            transition: transform 0.4s ease; /* 图片hover放大 */
+        }
+        .culture-card:hover img {
+            transform: scale(1.03);
+        }
+        .culture-card h3 { 
+            color: #2c3e50; 
+            margin-bottom: 15px; 
+            font-size: 1.4rem;
+            color: #2e7d32; /* 标题改为深绿，统一色系 */
+        }
+        .culture-card p {
+            color: #555; /* 文字浅一点，更易读 */
+            line-height: 1.8;
+            text-align: justify; /* 文字两端对齐 */
+            padding: 0 5px;
+        }
+        /* 按钮样式优化 */
+        .btn { 
+            display: inline-block; 
+            padding: 12px 24px; 
+            margin: 0 10px; /* 均匀间距 */
+            background: #388e3c; 
+            color: white; 
+            text-decoration: none; 
+            border-radius: 8px; /* 圆角优化 */
+            transition: all 0.3s ease; /* 全属性过渡 */
+            font-weight: 500;
+            box-shadow: 0 3px 8px rgba(56, 142, 60, 0.2);
+        }
+        .btn:hover { 
+            background: #2e7d32; 
+            transform: translateY(-2px); /* 按钮上浮 */
+            box-shadow: 0 5px 12px rgba(56, 142, 60, 0.3);
+        }
+        /* 按钮容器样式（替换行内样式） */
+        .btn-group {
+            text-align: center; 
+            margin-top: 40px;
+            padding: 10px 0 20px;
+        }
+        /* 响应式适配优化（小屏更友好） */
+        @media (max-width: 768px) {
+            .culture-card {
+                width: 100%; /* 手机端单栏 */
+            }
+            .culture-container {
+                gap: 20px;
+            }
+            .btn {
+                display: block;
+                margin: 10px auto;
+                width: 80%;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>缅甸特色文化</h1>
+
+    <!-- 佛教文化 -->
+    <div class="culture-container">
+        <div class="culture-card">
+            <img src="shwedagon.jpg" alt="仰光大金塔">
+            <h3>佛教文化</h3>
+            <p>缅甸是上座部佛教核心传播地，89%以上人口信奉佛教，佛教文化渗透到生活方方面面。仰光大金塔高98米，塔身贴满金箔，塔顶镶嵌76克拉钻石和数干颗红蓝宝石，是缅甸的精神象征；每个村镇都有佛塔，男性一生至少出家一次，成为缅甸独特的文化传统。</p>
+        </div>
+        <div class="culture-card">
+            <img src="water-festival.jpg" alt="缅甸泼水节">
+            <h3>传统节日</h3>
+            <p>泼水节（Thingyan）是缅甸最盛大的缅历新年庆典，每年4月13-16日举行。节日期间，全国放假，人们走上街头互相泼水祈福，寓意洗去过往的烦恼与不顺；除泼水外，还有舞龙舞狮、传统歌舞表演、布施僧侣等活动，仰光、曼德勒等城市会举办大型庆祝晚会。</p>
+        </div>
+    </div>
+
+    <!-- 传统服装与语言 -->
+    <div class="culture-container">
+        <div class="culture-card">
+            <img src="outfit.jpg" alt="缅甸传统服装">
+            <h3>传统服装</h3>
+            <p>缅甸传统服装以“笼基”（Lungi）为核心，男女日常皆穿：男性笼基多为素色或格纹，搭配短袖衬衫；女性笼基（称为“特敏”）色彩鲜艳，常绣有花卉、图腾，搭配紧身短上衣“冉雅”。缅甸女性还会用黄香楝粉涂抹面部（特纳卡），既是装饰也能防晒驱蚊，是独特的文化符号。</p>
+        </div>
+        <div class="culture-card">
+            <img src="language.jpg" alt="缅甸文字与语言">
+            <h3>缅甸语言</h3>
+            <p>缅甸官方语言为缅甸语，属汉藏语系藏缅语族，缅文采用圆形字母书写，所有字母皆带圆圈，是其最显著特征。缅甸有135个民族，衍生出掸语、克钦语、克伦语等数十种少数民族语言，其中掸语使用人口最多；在仰光、曼德勒等大城市，部分人群也能使用英语交流。</p>
+        </div>
+    </div>
+
+    <!-- 民族分布与饮食文化 -->
+    <div class="culture-container">
+        <div class="culture-card">
+            <img src="minority.jpg" alt="缅甸民族">
+            <h3>缅甸民族</h3>
+            <p>缅甸是多民族国家，其拥有一百多个民族，而缅族占总人口68%，主要聚居在伊洛瓦底江中下游平原；除了缅族以外，当地的华人，印度人，傣族人，景颇族人等也构造成了缅甸的民族分布。</p>
+        </div>
+        <div class="culture-card">
+            <img src="food.jpg" alt="缅甸特色美食">
+            <h3>饮食文化</h3>
+            <p>缅甸饮食融合东南亚与南亚风味，以米饭、咖喱为核心。经典美食有：缅式炒米粉（Mohinga），用鱼汤熬制米粉，是缅甸“国民早餐”；在接受大量印度和中国移民者的影响之下，缅甸人民不仅享受缅菜，他们还能品尝到各种印度菜，和中国菜。其中，印度早茶文化和云南的各种米线之类深受当地人的欢迎。</p>
+        </div>
+    </div>
+
+    <div class="btn-group">
+        <a href="index.html" class="btn">返回首页</a>
+        <a href="nature.html" class="btn">查看自然景观</a>
+        <a href="profile.html" class="btn">查看国家概况</a> <!-- 补充概况跳转 -->
+    </div>
+</body>
+</html>

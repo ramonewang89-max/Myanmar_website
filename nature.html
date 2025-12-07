@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>缅甸 - 自然景观</title>
+    <style>
+        /* 全局重置与基础样式 */
+        * { 
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box; 
+        }
+        
+        body { 
+            font-family: "PingFang SC", "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.7; 
+            padding: 30px 15px;
+            background: linear-gradient(120deg, #f5f7fa 0%, #e4eaf5 100%);
+        }
+        
+        /* 标题样式 */
+        h1 { 
+            text-align: center; 
+            color: #2d5ba3;
+            margin-bottom: 40px;
+            font-size: 2.2rem;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        h1::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: #2d5ba3;
+            border-radius: 2px;
+        }
+        
+        /* 容器样式 */
+        .nature-container { 
+            max-width: 1000px; 
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            padding: 10px 0;
+        }
+        
+        /* 卡片样式 */
+        .nature-card { 
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            padding: 30px; 
+            border-radius: 16px; 
+            box-shadow: 0 8px 24px rgba(45, 91, 163, 0.12);
+            background: white;
+            overflow: hidden;
+            position: relative;
+            transition: all 0.4s ease;
+        }
+        
+        .nature-card:hover {
+            box-shadow: 0 12px 32px rgba(45, 91, 163, 0.18);
+            transform: translateX(8px);
+        }
+        
+        /* 卡片左侧图片区 */
+        .nature-card .img-wrapper {
+            flex: 0 0 300px;
+            height: 220px;
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .nature-card img { 
+            width: 100%; 
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .nature-card:hover img {
+            transform: scale(1.08);
+        }
+        
+        /* 卡片右侧文字区 */
+        .nature-card .text-content {
+            flex: 1;
+            text-align: left;
+        }
+        
+        .nature-card h3 { 
+            color: #1a3b69; 
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+            display: inline-block;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #e1e8f0;
+        }
+        
+        .nature-card p {
+            color: #4a5568;
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+        
+        /* 按钮样式 */
+        .btn-group {
+            text-align: center;
+            margin-top: 60px;
+        }
+        
+        .btn { 
+            display: inline-block; 
+            padding: 12px 28px; 
+            margin: 0 10px;
+            background: linear-gradient(to right, #2d5ba3, #4a7bc8);
+            color: white; 
+            text-decoration: none; 
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(45, 91, 163, 0.2);
+            border: none;
+            font-weight: 500;
+        }
+        
+        .btn:hover { 
+            background: linear-gradient(to right, #1a3b69, #2d5ba3);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 16px rgba(45, 91, 163, 0.3);
+        }
+        
+        /* 响应式适配 */
+        @media (max-width: 768px) {
+            .nature-card {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .nature-card .img-wrapper {
+                flex: 0 0 auto;
+                width: 100%;
+                height: 200px;
+            }
+            
+            .nature-card .text-content {
+                text-align: center;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .btn {
+                display: block;
+                margin: 10px auto;
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>自然景观</h1>
+    <div class="nature-container">
+        <!-- 原有景点：茵莱湖 -->
+        <div class="nature-card">
+            <div class="img-wrapper">
+                <img src="inle-lake.jpg" alt="茵莱湖">
+            </div>
+            <div class="text-content">
+                <h3>茵莱湖</h3>
+                <p>缅甸第二大湖，湖上有独特的浮岛农田（由水草和泥土构成），当地渔民以“单脚划船”的绝技闻名，湖面风光如诗如画。清晨的薄雾笼罩湖面，与错落的浮岛、摇曳的渔船构成一幅绝美的自然画卷。</p>
+            </div>
+        </div>
+        
+        <!-- 原有景点：蒲甘古城 -->
+        <div class="nature-card">
+            <div class="img-wrapper">
+                <img src="bagan.jpg" alt="蒲甘古城">
+            </div>
+            <div class="text-content">
+                <h3>蒲甘古城</h3>
+                <p>被誉为“万塔之城”，曾有上万座佛塔，现存数千座，跨越千年历史。日出时分，阳光洒在佛塔群上，晨雾缭绕间，佛塔的轮廓与金色的霞光交织，景色震撼人心。</p>
+            </div>
+        </div>
+        
+        <!-- 新增：仰光 -->
+        <div class="nature-card">
+            <div class="img-wrapper">
+                <img src="yangon.jpg" alt="仰光">
+            </div>
+            <div class="text-content">
+                <h3>仰光</h3>
+                <p>缅甸最大城市和前首都，兼具现代繁华与殖民风情。市中心矗立着高达320米的仰光地标塔，殖民时期的英式建筑与金碧辉煌的佛塔交相辉映，街头巷尾既有现代商场的热闹，也保留着充满烟火气的传统市集，是缅甸最具活力的城市!</p>
+            </div>
+        </div>
+        
+        <!-- 新增：乌本桥 -->
+        <div class="nature-card">
+            <div class="img-wrapper">
+                <img src="ubeinbridge.jpg" alt="曼德勒乌本桥">
+            </div>
+            <div class="text-content">
+                <h3>乌本桥</h3>
+                <p>世界上最长的柚木桥，全长1200米，始建于1850年，整座桥由珍贵柚木搭建而成，无一颗铁钉。日落时分是乌本桥最美的时刻，金色的阳光洒在水面和桥身，行人与僧侣的身影倒映在东塔曼湖中，被誉为“缅甸最美日落之地”。</p>
+            </div>
+        </div>
+        
+        <!-- 新增：大金石塔 -->
+        <div class="nature-card">
+            <div class="img-wrapper">
+                <img src="kyaiktiyo.jpg" alt="大金石塔">
+            </div>
+            <div class="text-content">
+                <h3>大金石塔</h3>
+                <p>缅甸最神奇的佛教圣地之一，一块重达611吨的巨石屹立在悬崖边缘，看似摇摇欲坠却千年不倒，石上建有高7.3米的佛塔，塔身贴满金箔。大金石被视为神的化身，女性禁止触碰，站在悬崖边俯瞰下方的山林，视野开阔，景色壮丽。</p>
+            </div>
+        </div>
+        
+        <!-- 新增：曼德勒 -->
+        <div class="nature-card">
+            <div class="img-wrapper">
+                <img src="mandalay.jpg" alt="曼德勒">
+            </div>
+            <div class="text-content">
+                <h3>曼德勒</h3>
+                <p>缅甸中部核心城市，背靠曼德勒山，是缅甸传统文化中心。曼德勒山海拔236米，登顶可俯瞰整座城市与伊洛瓦底江风光，山上遍布佛塔和寺庙；山下的曼德勒皇宫是缅甸最后一个王朝的皇家宫殿，红墙金瓦的建筑风格尽显缅甸皇家气派。</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="btn-group">
+        <a href="index.html" class="btn">返回首页</a>
+        <a href="profile.html" class="btn">查看国家概况</a>
+        <a href="culture.html" class="btn">查看特色文化</a> <!-- 补充文化页面跳转，优化导航 -->
+    </div>
+</body>
+</html>
